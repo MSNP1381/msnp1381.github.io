@@ -4,6 +4,10 @@ date: 2024-07-24
 categories: [Machine Learning, AI Tools]
 tags: [kaggle, ai, problem-solving, machine-learning]
 author: msnp1381
+
+image:
+  path: /assets/img/kaggleAgent1/agentVis.png
+  alt: LLM agent visualization
 ---
 
 # Revolutionizing Kaggle Challenges: Introducing the AI-Powered Problem Solver
