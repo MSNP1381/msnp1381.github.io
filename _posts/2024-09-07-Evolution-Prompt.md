@@ -1,12 +1,12 @@
 ---
-title: The Evolution of Prompt Engineering, From Art to Science
+title: "The Evolution of Prompt Engineering : From Art to Science"
 date: 2024-09-07
 categories: [Artificial Intelligence, Language Models]
 tags: [prompt engineering, language models, DSPy, TextGrad]
-author: msnp1381
 ---
 
-The field of prompt engineering has undergone significant changes since the advent of large language models. This article explores the evolution from traditional prompt engineering to more sophisticated approaches like prompt compiling and optimization.
+
+The field of prompt engineering has undergone significant changes since the risr of large language models. This article explores the evolution from traditional prompt engineering to more sophisticated approaches like prompt compiling and optimization.
 
 ## The Decline of Traditional Prompt Engineering
 
@@ -58,7 +58,8 @@ This approach offers several benefits:
 
 Prompt optimization techniques aim to refine and improve prompts for better performance. DSPy introduces the concept of optimizers, which are algorithms that can tune the parameters of a DSPy program to maximize specified metrics, such as accuracy.
 
-{% include alert.html type="info" content="A DSPy optimizer is an algorithm that can tune the parameters of a DSPy program (i.e., the prompts and/or the LM weights) to maximize the metrics you specify, like accuracy." %}
+> [!NOTE]
+> A DSPy optimizer is an algorithm that can tune the parameters of a DSPy program (i.e., the prompts and/or the LM weights) to maximize the metrics you specify, like accuracy
 
 Given a metric, DSPy can optimize all three types of parameters (LM weights, instructions, and demonstrations) with multi-stage optimization algorithms. These can combine gradient descent (for LM weights) and discrete LM-driven optimization for crafting/updating instructions and creating/validating demonstrations.
 
@@ -72,6 +73,7 @@ DSPy's teleprompter is a specific implementation that introduces:
 TextGrad is a framework for optimizing large language models (LLMs) using text-based feedback. It treats natural language as a differentiable signal, allowing AI systems to learn and improve through textual inputs rather than traditional numerical data.
 
 The framework operates through the following steps:
+
 1. Define an initial solution
 2. Create a loss function based on a system prompt
 3. Calculate gradients from the LLM's text feedback
