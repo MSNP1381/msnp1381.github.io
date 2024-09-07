@@ -1,8 +1,8 @@
 ---
 title: "Revolutionizing Kaggle Challenges: Introducing the AI-Powered Problem Solver"
 date: 2024-07-24
-categories: [Machine Learning, AI Tools]
-tags: [kaggle, ai, problem-solving, machine-learning]
+tags: [kaggle,AI, problem-solving, machine-learning]
+categories: [Machine Learning, AI Tools,Artificial Intelligence]
 author: msnp1381
 
 image:

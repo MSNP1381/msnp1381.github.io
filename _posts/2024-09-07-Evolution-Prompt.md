@@ -1,8 +1,8 @@
 ---
 title: "The Evolution of Prompt Engineering : From Art to Science"
 date: 2024-09-07
+tags: [prompt engineering, language models, DSPy, TextGrad,AI]
 categories: [Artificial Intelligence, Language Models]
-tags: [prompt engineering, language models, DSPy, TextGrad]
 ---
 
 
