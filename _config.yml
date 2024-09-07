@@ -31,7 +31,7 @@ github:
   username: msnp1381 # change to your github username
 
 twitter:
-  username: simpoftheworld # change to your twitter username
+  username: __MSNP__ # change to your Twitter username
 
 social:
   # Change to your full name.
@@ -40,7 +40,7 @@ social:
   email: mohamadnematpoor@gmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/simpoftheworld # change to your twitter homepage
+    - https://twitter.com/__MSNP__ # change to your twitter homepage
     - https://github.com/msnp1381 # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username

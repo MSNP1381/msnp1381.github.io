@@ -4,6 +4,7 @@ title: "LLM Agents and Code Generation Agents: The Dynamic Duo Reshaping AI"
 date: 2024-07-12
 categories: [artificial intelligence, software development]
 tags: [llm, code generation, ai agents, gpt-4, copilot]
+author: msnp1381
 
 image:
   path: /assets/img/LLMAgent1/image.png

@@ -2,6 +2,7 @@
 title: A Dilemma in AI Development
 date: 2024-07-11 15:30:00 +0330
 categories: [AI, Technology]
+author: msnp1381
 tags: [artificial intelligence, innovation, critical thinking]
 image:
   path: /assets/img/dillema/meme.jpg
