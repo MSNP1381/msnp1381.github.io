@@ -3,6 +3,9 @@ title: "The Evolution of Prompt Engineering : From Art to Science"
 date: 2024-09-07
 tags: [prompt engineering, language models, DSPy, TextGrad,AI]
 categories: [Artificial Intelligence, Language Models]
+image:
+  path: /assets/img/evoPrompt/trad_prompt.jpeg
+  alt: MAIN IMAGE
 ---
 
 
@@ -17,6 +20,10 @@ The initial excitement surrounding language models gave rise to prompt engineeri
 - **Model Dependency**: Prompts often needed to be tailored for specific models, limiting portability.
 - **Skill Barrier**: Effective prompt engineering required a mix of creativity and technical knowledge, creating a high skill barrier.
 
+![Challenges of Traditional Prompt Engineering](/assets/img/evoPrompt/an-illustration-of-a-human-and-a-robot-looking-at-each-other-face-to-face.png)
+_Key challenges in traditional prompt engineering_{: .text-center}
+[ref](https://spectrum.ieee.org/prompt-engineering-is-dead)
+
 These challenges were particularly evident in scenarios where prompt accuracy was critical. For instance, if a prompt had 0% or 100% accuracy, it could be considered trustworthy. However, accuracy around 70% or less posed significant challenges, forcing engineers into a cycle of trial and error.
 
 > In complex systems, such as sequential agents, an untraced output error could lead to completely incorrect results, which might be difficult to identify amidst thousands or hundreds of thousands of tokens.
@@ -24,6 +31,9 @@ These challenges were particularly evident in scenarios where prompt accuracy wa
 ## The Necessity of Prompt Compiling
 
 Prompt compiling emerged as a response to the shortcomings of traditional prompt engineering. This approach offers several advantages:
+
+![Prompt Compiling Process](/assets/img/evoPrompt/compileDiagram.jpg)
+_The process of prompt compiling_{: .text-center}
 
 - **Abstraction**: Developers can focus on desired outcomes rather than specific prompt wording.
 - **Automated Optimization**: Systems can refine prompts based on specified constraints and assertions.
@@ -48,6 +58,9 @@ DSPy programs consist of multiple calls to Language Models (LMs), stacked togeth
 2. Instructions
 3. Demonstrations of the input/output behavior
 
+![Comparison: Traditional Prompting vs. DSPy](/assets/img/evoPrompt/workflow.webp)
+_Traditional prompt engineering vs. DSPy approach_{: .text-center}
+
 This approach offers several benefits:
 
 - **Flexibility**: Adapts to different LLMs and use cases.
@@ -61,6 +74,9 @@ Prompt optimization techniques aim to refine and improve prompts for better perf
 > [!NOTE]
 > A DSPy optimizer is an algorithm that can tune the parameters of a DSPy program (i.e., the prompts and/or the LM weights) to maximize the metrics you specify, like accuracy
 
+![DSPy Optimizer in Action](/assets/img/evoPrompt/optimizer.webp)
+_Visualization of a DSPy optimizer refining a prompt_{: .text-center}
+
 Given a metric, DSPy can optimize all three types of parameters (LM weights, instructions, and demonstrations) with multi-stage optimization algorithms. These can combine gradient descent (for LM weights) and discrete LM-driven optimization for crafting/updating instructions and creating/validating demonstrations.
 
 DSPy's teleprompter is a specific implementation that introduces:
@@ -71,6 +87,9 @@ DSPy's teleprompter is a specific implementation that introduces:
 ## TextGrad in Prompt Optimization
 
 TextGrad is a framework for optimizing large language models (LLMs) using text-based feedback. It treats natural language as a differentiable signal, allowing AI systems to learn and improve through textual inputs rather than traditional numerical data.
+
+![TextGrad Framework](assets/img/evoPrompt/textGrad.png)
+_The TextGrad framework process_{: .text-center}
 
 The framework operates through the following steps:
 
@@ -96,6 +115,9 @@ TextGrad has demonstrated success in several areas:
 ## Future Directions and Challenges
 
 As the field of prompt engineering evolves, several key areas are emerging for future development:
+
+![Future Directions and Challenges](/assets/img/evoPrompt/conc.jpeg)
+_Mind map of future directions and challenges in prompt engineering_{: .text-center}
 
 - **Automated Prompt Generation**: AI systems that can generate and optimize prompts without human intervention.
 - **Cross-model Compatibility**: Developing universal prompting techniques that work across different LLM architectures.
