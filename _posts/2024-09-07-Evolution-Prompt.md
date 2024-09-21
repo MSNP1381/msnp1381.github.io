@@ -9,7 +9,7 @@ image:
 ---
 
 
-The field of prompt engineering has undergone significant changes since the risr of large language models. This article explores the evolution from traditional prompt engineering to more sophisticated approaches like prompt compiling and optimization.
+The field of prompt engineering has undergone significant changes since the rise of Large Language Models. This article explores the evolution from traditional prompt engineering to more sophisticated approaches like prompt compiling and optimization.
 
 ## The Decline of Traditional Prompt Engineering
 
@@ -72,7 +72,7 @@ This approach offers several benefits:
 Prompt optimization techniques aim to refine and improve prompts for better performance. DSPy introduces the concept of optimizers, which are algorithms that can tune the parameters of a DSPy program to maximize specified metrics, such as accuracy.
 
 > [!NOTE]
-> A DSPy optimizer is an algorithm that can tune the parameters of a DSPy program (i.e., the prompts and/or the LM weights) to maximize the metrics you specify, like accuracy
+> A DSPy optimizer is an algorithm that can tune the parameters of a DSPy program (i.e., the prompts and/or the LM weights) to maximize the metrics you specify, like accuracy.
 
 ![DSPy Optimizer in Action](/assets/img/evoPrompt/optimizer.webp)
 _Visualization of a DSPy optimizer refining a prompt_{: .text-center}
@@ -86,7 +86,7 @@ DSPy's teleprompter is a specific implementation that introduces:
 
 ## TextGrad in Prompt Optimization
 
-TextGrad is a framework for optimizing large language models (LLMs) using text-based feedback. It treats natural language as a differentiable signal, allowing AI systems to learn and improve through textual inputs rather than traditional numerical data.
+TextGrad is a framework for optimizing Large Language Models (LLMs) using text-based feedback. It treats natural language as a differentiable signal, allowing AI systems to learn and improve through textual inputs rather than traditional numerical data.
 
 ![TextGrad Framework](assets/img/evoPrompt/textGrad.png)
 _The TextGrad framework process_{: .text-center}
@@ -108,7 +108,7 @@ TextGrad has demonstrated success in several areas:
 
 2. **Question Answering**: Increased the zero-shot accuracy of GPT-4 in the Google-Proof Question Answering benchmark from 51% to 55%, the highest known result for this dataset [^1][^2].
 
-3. **Medical Applications**: Optimized radiotherapy treatment plans by fine-tuning hyperparameters to better target tumors while minimizing damage to healthy tissues [^1][^3].
+3. **Medical Applications**: Optimized radiotherapy treatment plans by fine-tuning hyperparameter to better target tumors while minimizing damage to healthy tissues [^1][^3].
 
 4. **Scientific Problem-Solving**: Showed potential in optimizing complex solutions in fields like chemistry and medicine, where traditional optimization methods may struggle [^4].
 
@@ -137,5 +137,5 @@ The field of prompt engineering is evolving from an art form to a more systemati
 
 [^1]: Nair, S., Savarese, P., & Nie, W. (2023). TextGrad: Advancing LLM Performance through Text-Based Gradient Optimization. arXiv preprint arXiv:2310.08117.
 [^2]: Khattab, O., Iyer, S., Ma, K., Agrawal, A., Chen, D., & Raghunathan, A. (2023). DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines. arXiv preprint arXiv:2310.03714.
-[^3]: Zhu, Y., Liu, J., & Jiang, J. (2023). Prompt optimization techniques for large language models: A survey. arXiv preprint arXiv:2310.04455.
-[^4]: Brown, T. B., Mann, B., Ryder, N., Subbiah, M., Kaplan, J., Dhariwal, P., ... & Amodei, D. (2020). Language models are few-shot learners. arXiv preprint arXiv:2005.14165.
+[^3]: Zhu, Y., Liu, J., & Jiang, J. (2023). Prompt optimization techniques for Large Language Models: A survey. arXiv preprint arXiv:2310.04455.
+[^4]: Brown, T. B., Mann, B., Ryder, N., Subbiah, M., Kaplan, J., Dhariwal, P., ... & Amodei, D. (2020). Language Models are few-shot learners. arXiv preprint arXiv:2005.14165.
