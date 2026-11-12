@@ -1,0 +1,67 @@
+// Monochrome, early-computing typography and crisp, unrounded surfaces.
+:root {
+  --accent: #ffffff;
+  --bg: #080808;
+  --panel: #151515;
+  --line: #353535;
+  --muted: #a0a0a0;
+}
+.wordmark,
+.footer-logo {
+  font-family: var(--mono);
+}
+.about-section h1 {
+  font-family: var(--mono);
+  font-size: clamp(36px, 4.4vw, 64px);
+  letter-spacing: -2.5px;
+}
+.section h2,
+.project h3,
+.timeline-content h3 {
+  font-family: var(--mono);
+}
+.project-art,
+dialog,
+.button,
+.tags span {
+  border-radius: 0;
+}
+.project-art {
+  background: #101010;
+}
+.project details,
+.all-projects {
+  border-bottom-style: dashed;
+}
+.terminal-landing {
+  background: #080808;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 3px,
+      #ffffff03 3px,
+      #ffffff03 4px
+    );
+  }
+}
+.fullscreen-shell .terminal-output {
+  text-shadow: 0 0 10px #ffffff12;
+}
+.primary {
+  background: #ffffff;
+  color: #080808;
+}
+.primary:hover {
+  background: #d8d8d8;
+}
+@media (max-width: 520px) {
+  .about-section h1 {
+    font-size: clamp(32px, 9vw, 46px);
+    letter-spacing: -1.8px;
+  }
+}

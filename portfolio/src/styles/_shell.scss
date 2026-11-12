@@ -1,0 +1,95 @@
+// A minimal Unix terminal: fixed-width text, compact output, a block caret.
+.fullscreen-shell {
+  padding: clamp(20px, 3vw, 48px) clamp(20px, 3vw, 48px) 64px;
+  .terminal-body {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #bfbfbf;
+  }
+  .terminal-entry {
+    margin: 0 0 16px;
+  }
+  .terminal-output {
+    max-width: 900px;
+    text-shadow: none;
+  }
+  .terminal form {
+    opacity: 0.65;
+    gap: 10px;
+    &:focus-within {
+      opacity: 1;
+    }
+  }
+  .terminal form .prompt,
+  .terminal-entry .prompt {
+    font: inherit;
+    color: #bfbfbf;
+  }
+  .terminal input {
+    font: inherit;
+    padding: 0;
+    color: #d8d8d8;
+    caret-color: #dedede;
+    &::placeholder {
+      color: #888888;
+    }
+  }
+  .command-response {
+    padding-left: 0;
+    color: #bfbfbf;
+  }
+  .command-response p {
+    margin: 0;
+  }
+  .command-row {
+    padding: 0;
+    grid-template-columns: 100px 1fr;
+  }
+  .command-name {
+    color: #dedede;
+  }
+  .terminal-output a {
+    text-decoration: none;
+    border-bottom: 1px dotted #777777;
+  }
+}
+@supports (caret-shape: block) {
+  .fullscreen-shell .terminal input {
+    caret-shape: block;
+  }
+}
+.terminal-scroll {
+  left: clamp(20px, 3vw, 48px);
+  right: clamp(20px, 3vw, 48px);
+  bottom: 18px;
+  border: 0;
+  padding: 0;
+  font-family: "Courier New", Courier, monospace;
+  letter-spacing: 0;
+  color: #777777;
+  font-size: 10px;
+}
+.brand-logo {
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+.wordmark {
+  gap: 0;
+}
+@media (max-width: 520px) {
+  .fullscreen-shell .terminal-body {
+    font-size: 14px;
+  }
+  .fullscreen-shell .terminal input {
+    font-size: 16px;
+  }
+  .fullscreen-shell .command-row {
+    grid-template-columns: 84px 1fr;
+  }
+  .wordmark .brand-logo {
+    width: 90px;
+    height: 36px;
+  }
+}

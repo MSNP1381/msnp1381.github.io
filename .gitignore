@@ -25,3 +25,6 @@ package-lock.json
 !.vscode/tasks.json
 
 # Misc
+
+# Keep the React app dependency graph reproducible.
+!portfolio/package-lock.json

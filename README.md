@@ -1,3 +1,16 @@
+# MSNP — portfolio and blog
+
+The React portfolio is published at https://msnp1381.github.io/ and the original Chirpy blog at https://msnp1381.github.io/blog/.
+
+- Edit `portfolio/src/` and `portfolio/public/` for the website.
+- Continue writing posts in the existing `_posts/` directory.
+- Push to `master` to build and deploy both through `.github/workflows/pages-deploy.yml`.
+- See [deployment details](portfolio/deployment/github-pages/README.md).
+
+The original blog/theme documentation follows.
+
+---
+
 <!-- markdownlint-disable-next-line -->
 <div align="center">
 
