@@ -25,7 +25,7 @@ Open the local URL printed by Vite. `npm run build` produces `dist/`; `npm run p
 
 `help`, `whoami`, `resume`, `resume download`, `projects`, `stack`, `now`, `contact`, `github`, `blog`, `ls`, `cat resume.md`, `cat stack.json`, `cat contact.txt`, `cd projects`, `cd about`, `cd now`, `cd blog`, `pwd`, `date`, `echo`, `clear`.
 
-`help` lists seven primary commands; `help all` lists every supported command. Arrow keys browse history, Tab completes command names, and Ctrl+L clears output. Commands run entirely in the browser.
+`help` lists seven primary commands; `help all` lists every supported command. Arrow keys browse history, Tab or Right Arrow completes command names (Right Arrow fills `help` at an empty prompt), and Ctrl+L clears output. Commands run entirely in the browser.
 
 ## Content
 

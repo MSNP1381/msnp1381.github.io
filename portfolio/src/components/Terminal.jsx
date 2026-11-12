@@ -246,6 +246,27 @@ export default function Terminal({ onResume }) {
       setCursor(next);
       setInput(history[next] || "");
     }
+    if (
+      event.key === "ArrowRight" &&
+      !event.shiftKey &&
+      !event.ctrlKey &&
+      !event.altKey &&
+      !event.metaKey &&
+      !event.nativeEvent.isComposing &&
+      event.currentTarget.selectionStart === input.length &&
+      event.currentTarget.selectionEnd === input.length
+    ) {
+      const matches =
+        input === ""
+          ? ["help"]
+          : Object.keys(commandHelp).filter((name) =>
+              name.startsWith(input.toLowerCase()),
+            );
+      if (matches.length === 1 && matches[0] !== input) {
+        event.preventDefault();
+        setInput(matches[0]);
+      }
+    }
     if (event.key === "Tab" && input.trim()) {
       const matches = Object.keys(commandHelp).filter((c) =>
         c.startsWith(input.toLowerCase()),
@@ -302,8 +323,9 @@ export default function Terminal({ onResume }) {
             ))}
           </div>
           <p className="sr-only" id="terminal-instructions">
-            Type help for commands. Use arrow keys for history and Tab to
-            complete a command. Scroll down to explore the portfolio.
+            Type help for commands. Use Up and Down for history, and Tab or
+            Right Arrow to complete a command. Scroll down to explore the
+            portfolio.
           </p>
           <form
             onSubmit={(event) => {

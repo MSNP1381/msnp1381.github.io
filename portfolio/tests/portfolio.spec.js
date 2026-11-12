@@ -13,7 +13,11 @@ test("terminal commands, history, completion, and safe output", async ({
   page.on("pageerror", (e) => errors.push(e.message));
   await page.goto("/", { waitUntil: "domcontentloaded" });
   await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
-  await command(page, "help");
+  const input = page.getByRole("textbox", { name: "Terminal command" });
+  await input.focus();
+  await input.press("ArrowRight");
+  await expect(input).toHaveValue("help");
+  await input.press("Enter");
   await expect(
     page.getByRole("button", { name: "whoami", exact: true }),
   ).toBeVisible();
@@ -22,11 +26,25 @@ test("terminal commands, history, completion, and safe output", async ({
   await expect(page.locator(".command-response").last()).toContainText(
     "PostgreSQL",
   );
-  const input = page.getByRole("textbox", { name: "Terminal command" });
   await input.press("ArrowUp");
   await expect(input).toHaveValue("stack");
   await input.press("ArrowDown");
   await expect(input).toHaveValue("");
+  await input.fill("hel");
+  await input.evaluate((element) => element.setSelectionRange(1, 1));
+  await input.press("ArrowRight");
+  await expect(input).toHaveValue("hel");
+  expect(await input.evaluate((element) => element.selectionStart)).toBe(2);
+  await input.press("ArrowRight");
+  await expect(input).toHaveValue("hel");
+  await input.press("ArrowRight");
+  await expect(input).toHaveValue("help");
+  await input.fill("p");
+  await input.press("ArrowRight");
+  await expect(input).toHaveValue("p");
+  await input.fill("pro");
+  await input.press("ArrowRight");
+  await expect(input).toHaveValue("projects");
   await input.fill("pro");
   await input.press("Tab");
   await expect(input).toHaveValue("projects");
