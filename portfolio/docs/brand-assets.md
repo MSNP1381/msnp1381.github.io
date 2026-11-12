@@ -1,6 +1,6 @@
 # MSNP logo assets
 
-The user supplied the original geometric MSNP logo. `public/assets/msnp-original.png` preserves that source unchanged. `public/assets/msnp-dark.png` is the dark-background edit used in the navigation, footer, and favicon.
+The user supplied the original geometric MSNP logo. `public/assets/msnp-original.png` preserves that source unchanged. `public/assets/msnp-dark.png` is the dark-background edit used in the navigation and footer. `public/assets/msnp-white.svg` is the monochrome geometric favicon, with a copy at the blog’s `assets/img/favicons/msnp-white.svg`.
 
 Created with the built-in `image_gen` tool, using the supplied logo as the edit target. The rest of the website retains its monochrome palette.
 

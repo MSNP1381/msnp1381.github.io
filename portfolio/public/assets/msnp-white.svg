@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <title>MSNP</title>
+  <rect width="256" height="256" fill="#080808"/>
+  <g fill="#fff">
+    <path d="M11 102 39 132 67 102V164H11Z"/>
+    <path d="M87 139A23 23 0 0 1 130 116L116 130A23 23 0 0 1 79 151L94 136Z"/>
+    <path d="M141 102 174 137V103H198V164H141Z"/>
+    <path d="M209 102H228A17 17 0 0 1 228 136H227V164H209Z"/>
+  </g>
+</svg>

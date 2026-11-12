@@ -25,7 +25,7 @@ Open the local URL printed by Vite. `npm run build` produces `dist/`; `npm run p
 
 `help`, `whoami`, `resume`, `resume download`, `projects`, `stack`, `now`, `contact`, `github`, `blog`, `ls`, `cat resume.md`, `cat stack.json`, `cat contact.txt`, `cd projects`, `cd about`, `cd now`, `cd blog`, `pwd`, `date`, `echo`, `clear`.
 
-`help` lists five primary commands; `help all` lists every supported command. Arrow keys browse history, Tab completes command names, and Ctrl+L clears output. Commands run entirely in the browser.
+`help` lists seven primary commands; `help all` lists every supported command. Arrow keys browse history, Tab completes command names, and Ctrl+L clears output. Commands run entirely in the browser.
 
 ## Content
 
@@ -45,3 +45,5 @@ The supplied MSNP logo and its dark-background edit are documented in [brand ass
 ## GitHub Pages with the existing blog
 
 See [the migration guide](deployment/github-pages/README.md) for keeping the current Jekyll code beside `portfolio/`, publishing React at `/`, and preserving the blog at `/blog/`. The ready workflow and migration scripts are included.
+
+Run `play` in the terminal to start the original looping 8-bit tune, and `pause` to suspend it. Playing again resumes it. Audio is synthesized locally with the Web Audio API and starts only after a command. The favicon uses a white SVG version of the geometric MSNP mark.

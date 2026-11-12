@@ -17,7 +17,7 @@ test("terminal commands, history, completion, and safe output", async ({
   await expect(
     page.getByRole("button", { name: "whoami", exact: true }),
   ).toBeVisible();
-  await expect(page.locator(".command-row")).toHaveCount(5);
+  await expect(page.locator(".command-row")).toHaveCount(7);
   await command(page, "stack");
   await expect(page.locator(".command-response").last()).toContainText(
     "PostgreSQL",

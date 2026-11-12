@@ -52,5 +52,7 @@ export const commandHelp = {
   pwd: "Working directory",
   date: "Date / time",
   echo: "Print text",
+  play: "8-bit music",
+  pause: "Pause music",
   clear: "Clear screen",
 };

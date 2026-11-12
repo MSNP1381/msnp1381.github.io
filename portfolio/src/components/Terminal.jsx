@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { commandHelp, profile, projects } from "../data/profile";
 import { downloadResume } from "../data/resume";
+import { ChiptunePlayer } from "../audio/ChiptunePlayer.js";
 
 const prompt = "visitor@msnp:~$";
 
@@ -20,11 +21,19 @@ export default function Terminal({ onResume }) {
   const [entries, setEntries] = useState([]);
   const [history, setHistory] = useState([]);
   const [cursor, setCursor] = useState(0);
+  const musicRef = useRef(null);
   const inputRef = useRef(null);
   const bodyRef = useRef(null);
   useEffect(() => {
     bodyRef.current.scrollTop = bodyRef.current.scrollHeight;
   }, [entries]);
+  useEffect(
+    () => () => {
+      musicRef.current?.dispose();
+      musicRef.current = null;
+    },
+    [],
+  );
   const clear = () => {
     setEntries([]);
   };
@@ -39,7 +48,7 @@ export default function Terminal({ onResume }) {
       ))}
     </>
   );
-  const run = (value) => {
+  const run = async (value) => {
     const raw = value.trim();
     if (!raw) return;
     const [cmd, ...args] = raw.split(/\s+/);
@@ -56,9 +65,15 @@ export default function Terminal({ onResume }) {
               .filter(
                 ([name]) =>
                   args[0] === "all" ||
-                  ["whoami", "resume", "projects", "contact", "clear"].includes(
-                    name,
-                  ),
+                  [
+                    "whoami",
+                    "resume",
+                    "projects",
+                    "contact",
+                    "play",
+                    "pause",
+                    "clear",
+                  ].includes(name),
               )
               .map(([name, desc]) => (
                 <div className="command-row" key={name}>
@@ -187,6 +202,23 @@ export default function Terminal({ onResume }) {
         } else response = `cd: ${args[0]}: No such directory. Try ls.`;
         break;
       }
+      case "play":
+        try {
+          musicRef.current ||= new ChiptunePlayer();
+          response = await musicRef.current.play();
+        } catch {
+          response = "Audio unavailable in this browser.";
+        }
+        break;
+      case "pause":
+        try {
+          response = musicRef.current
+            ? await musicRef.current.pause()
+            : "Music paused.";
+        } catch {
+          response = "Could not pause audio.";
+        }
+        break;
       case "clear":
         clear();
         inputRef.current?.focus();
